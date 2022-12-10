@@ -121,7 +121,7 @@ mean_co2_df <- co2_data %>%
   filter(year == max(year)) %>% 
   filter(country != "World")
 
-mean_co2 <- mean(mean_co2_df$co2_per_capita)
+mean_co2 <- round(mean(mean_co2_df$co2_per_capita), digits = 3)
 
 iso <- unique(co2_data$iso_code)
 
